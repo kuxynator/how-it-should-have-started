@@ -1,0 +1,10 @@
+{
+  "name": "how-it-should-have-started",
+  "version": "0.0.5",
+  "factorio_version": "0.18",
+  "title": "How It Should Have Started",
+  "author": "Pawz",
+  "homepage": "",
+  "dependencies": ["base >= 0.17.0"],
+  "description": "Jump straight to building your base with speedy construction bots! Super handy for those times when you have all the initial stuff planned out and don't want to spend time chopping down trees. Adds custom construction bots, roboport and exoskeletons to the player when they join the game. These are equivalent to top tier equipment but cannot be built and will disappear when you research the upper tiers of these technologies. Grants construction research by default to allow ghosts from the start. "
+}

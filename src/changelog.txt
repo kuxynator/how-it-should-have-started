@@ -1,0 +1,13 @@
+v 0.0.5
+ - Updated to Factorio version 0.18
+
+v 0.0.4
+ - Updated technology name for roboports to match the new name in base Factorio
+
+v 0.0.3
+ - Fixed the disappearing code that was supposed to set the construction bot research
+
+v 0.0.2
+ - Removed a source image that bloated the file size
+
+v 0.0.1
