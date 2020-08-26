@@ -9,9 +9,32 @@ local inventories = {
     defines.inventory.player_player_trash
 }
 
+local items = {
+	-- ["light-armor"] = 1, --NOTE disable this if the gamer should work a little bit ;-) 
+	["speedy-bot"] = 100,
+	["speedy-exo"] = 1,
+	["speedy-robo"] = 1,
+	["solar-panel-equipment"] = 1
+}
+
+script.on_init(
+    function()	
+	
+		if not remote.interfaces["freeplay"] then return end
+
+		-- Add items
+		local created_items = remote.call("freeplay", "get_created_items")
+		for k,v in pairs(items) do
+			created_items[k] = (created_items[k] or 0) + v
+		end	
+		remote.call("freeplay", "set_created_items", created_items)
+	end
+)
+
 script.on_event(
     defines.events.on_player_created,
     function(event)
+        --[[
         local player = game.players[event.player_index]
 
         local playerInventory = player.get_main_inventory()
@@ -27,7 +50,7 @@ script.on_event(
         playerInventory.insert({name = "solar-panel-equipment", count = 1})
 
         player.force.technologies["construction-robotics"].researched = true
-
+        ]]
         --player.insert({name = "light-armor", count = 1})
         --[[
         
@@ -48,6 +71,7 @@ script.on_event(
         end]]
     end
 )
+
 script.on_event(
     defines.events.on_research_finished,
     function(event)
